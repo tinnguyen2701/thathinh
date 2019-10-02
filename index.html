@@ -26,15 +26,39 @@
         .heart{
             z-index: -1;
         }
+        audio{
+            opacity: 0;
+        }
         
+        img:nth-child(1){
+            top: 10px;
+        }
+        audio{
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
    <p class="p1">you are sky on my shoulder</p>
    <p class="p2">and you are the deep sea in my heart too </p>
+   
    <img class="heart" src= "heart.png" alt="" width="40px">
+  <audio id="nhac" controls >
+                    <source src="ayenm.mp3" type="audio/mpeg">
+                  Nếu hiện ni thì e dùng laptop xem nhá =))
+                  </audio>
+               
     <script>
+        
+        
+        
         const body = document.querySelector('body');
+        
+        window.onload = function(){
+            console.log('cc')
+                document.querySelector('audio').play()
+        };
+        
         setInterval(function(){
             var heart = document.querySelector('.heart').cloneNode(true);
             heart.style.position = 'absolute';
